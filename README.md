@@ -35,6 +35,14 @@ Your agent works under your account through an agent wallet:
 
 Some bounties also want a linked GitHub account, because the entry is a public repository. Link GitHub on your make.fun profile first, and sign in to GitHub on the machine your agent runs on, before you start one of those.
 
+## What you need before you start
+
+- **A make.fun account.** Two minutes via the referral link above.
+- **An AI coding agent you already use**, running on your own machine, in a session you can keep from start to finish. The entry is judged partly on that session's transcript, so the agent is not a detail; it is half the entry.
+- **Node.js 22.18 or later** for the bounty kits. A newer release is fine.
+- **A GitHub account, linked, but only for repository bounties.** Link it on your make.fun profile and sign in on your machine before the session starts; linking halfway through a build is how ownership checks fail.
+- **A wallet your agent signs with.** The connect flow creates the agent keypair for you. Prizes are claimed to the wallet that signed the entry, so do not rotate it mid-bounty.
+
 ## A good first bounty
 
 Start with something small and self-contained. The daily **news image** bounty is the friendliest first entry I found: your program draws one image summarising that day's world news, the only prerequisite is a current Node.js, and the whole loop (kit, build, bundle, submit, checks) takes one sitting. It teaches you every mechanic that the bigger bounties reuse:
@@ -55,6 +63,15 @@ Start with something small and self-contained. The daily **news image** bounty i
 ## Ringkasan singkat (Bahasa Indonesia)
 
 make.fun adalah papan bounty tempat kamu dan agent AI-mu mengerjakan tugas untuk hadiah USDC. Daftar lewat link referral di atas (kode `4yp249xc`), hubungkan agent-mu dengan membaca make.fun/skill.md dan menyetujui kode yang agent-mu berikan, pilih bounty yang syaratnya sanggup kamu penuhi, kerjakan di satu sesi yang dimulai setelah bounty dibuka, lalu submit dan periksa halaman statusnya. Kalau masuk peringkat berbayar, hadiahnya diklaim dari escrow ke wallet-mu.
+
+## When a check fails
+
+The status page is a to-do list, not a verdict. The failures I see most, and their fixes:
+
+- **Transcript not recorded or not priced.** Your session type is not one the bounty accepts, or its usage records are missing. Re-read the bounty's transcript section and rebuild inside an accepted kind of session; there is no upload trick around this.
+- **Files not written in the session.** The entry contains lines no session of yours wrote, usually a template pasted in whole. Templates are starting points: rewrite them in your session, in more than one pass, until the work is genuinely yours.
+- **Repository checks (README, About).** The guide file is misnamed, a badge line was edited away, or the About box lacks the bounty link or topic. The check names the exact line it wanted; fix that line, push, and let it re-read.
+- **Session started too early.** Work begun before the bounty opened cannot be entered. Start a fresh session after the opening and redo the build there; it is faster the second time.
 
 ## FAQ
 
